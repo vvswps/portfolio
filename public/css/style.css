@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* make two classes 
+one for toggle active and other for inactive
+active will be expanded and inactive just icons */
+
+/* toggle inactive */
+.sidebar {
+  max-width: 5rem;
+  min-width: 5rem;
+  background: #0e0e19;
+  /* background: #23233f; */
+  min-height: 100vh;
+  opacity: 90%;
+  display: flex;
+  padding: 1rem;
+}
+
+.sidebar .nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sidebar .nav .list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 50vh;
+  align-items: center;
+  list-style: none;
+}
+
+.sidebar .nav .list .nav-list-item a {
+  text-decoration: none;
+}
+.sidebar .nav .list .nav-list-item a .text {
+  display: none;
+}
+
+.sidebar .nav .list .nav-list-item a .icon {
+  font-size: 2rem;
+  /* color: antiquewhite; */
+  color: #837f8a;
+}
+
+.sidebar .nav .intro #nameDate {
+  display: none;
+}
+.sidebar .nav .intro .pic img {
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 50%;
+}
+
+.sidebar .nav .list .nav-list-item a .icon:hover,
+.sidebar .nav .list .nav-list-item.active a .icon {
+  color: aliceblue;
+  transition: 250ms;
+}
+
+.sidebar .nav .list .nav-list-item.active::before {
+  content: "";
+  position: absolute;
+  height: 2.5rem;
+  width: 0.5rem;
+  background: whitesmoke;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  left: 0;
+}
+
+/* tooltip stuff */
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+} */
+
+/* Tooltip text */
+
+/* sidebar expanded stuff */
+.sidebar .nav .intro {
+  color: antiquewhite;
+}
+.sidebar .nav .intro #date {
+  font-size: 0.7rem;
+  color: grey;
+}
+
+/* homepage */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.homepage .left {
+  background: #2c2c2c;
+  min-width: 60vw;
+  flex: 2;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.homepage .left .container p {
+  color: #837f8a;
+}
+
+.homepage .left .container h1 {
+  color: #ffb633;
+}
+
+.homepage .left .container .sub {
+  color: azure;
+}
+
+.homepage .left .container .btn-contactMe,
+#about .right .button-container button {
+  margin-top: 1rem;
+  border: 0.1rem solid #ffb633;
+  background-color: transparent;
+  padding: 0.4rem 2rem;
+  color: #ffb633;
+  border-radius: 0.2rem;
+}
+
+.homepage .left .container .btn-contactMe:hover,
+#about .right .button-container button:hover {
+  background-color: #ffb633;
+  color: azure;
+}
+
+.homepage .right {
+  background: #ffb633;
+  /* width: 40vw; */
+  flex: 1;
+}
+
+.sidebar {
+  position: absolute;
+}
+
+#pages .page {
+  display: none;
+}
+
+#pages .active-page {
+  display: flex;
+}
+
+.about-page {
+  padding-left: 5.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #313131;
+}
+
+.about-page .left {
+  flex: 1;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.about-page .right {
+  flex: 2;
+}
+.about-page .left .pic img {
+  width: 18rem;
+  height: 25rem;
+  border: 0.6rem solid #3e3e3e;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.about-page .left .pic {
+  margin-left: 8rem;
+  position: relative;
+}
+
+.about-page .right section {
+  margin-right: 18rem;
+  font-weight: 200;
+  position: relative;
+}
+
+.about-page .right section h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+
+#about .right .button-container button {
+  margin-right: 1rem;
+}
+
+#about .left .pic:before {
+  content: "";
+  position: absolute;
+  width: 18rem;
+  height: 24.5rem;
+  top: 20px;
+  border: 0.6rem solid #ffb633;
+}
+
+.about-page .right section h1::after {
+  content: "";
+  height: 2px;
+  width: 20%;
+  background: #ffb633;
+  position: absolute;
+  left: -6%;
+  bottom: 0px;
+}
+.homepage .left .container a,
+#about .right .button-container a {
+  text-decoration: none;
+}

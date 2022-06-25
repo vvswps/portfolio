@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="nav">
+            <ul class="list">
+                <li class="nav-list-item">
+                    <a href="#" id="nav-expand">
+                        <span class="icon">
+                            <ion-icon name="grid"></ion-icon>
+                        </span>
+                        <span class="text">BABAji</span>
+                    </a>
+                </li>
+                <li id="home-li" class="nav-list-item active"><a href="#home">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="text">Home</span>
+                    </a></li>
+                <li id="about-li" class="nav-list-item"><a href="#about">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <span class="text">About</span>
+                    </a></li>
+                <li id="projects-li" class="nav-list-item"><a href="#projects">
+                        <span class="icon">
+                            <ion-icon name="code-outline"></ion-icon>
+                        </span>
+                        <span class="text">Projects</span>
+                    </a></li>
+                <li id="team-li" class="nav-list-item"><a href="#team">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="text">Team</span>
+                    </a></li>
+                <li id="contact-li" class="nav-list-item"><a href="#contact">
+                        <span class="icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a></li>
+            </ul>
+            <div class="intro">
+                <span class="pic"><img src="android-chrome-512x512.png" alt=""></span>
+                <div id="nameDate">
+                    <div id="name">Aditya Singh</div>
+                    <div id="date">DD/MM/YY</div>
+                    <!-- insert date here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- homepage -->
+    <div id="pages">
+        <div id="home" class="homepage page active-page">
+            <div class="left">
+                <div class="container">
+                    <p>Hello</p>
+                    <h1>I'm Aditya</h1>
+                    <p class="sub">Freelance Web Dev <br>& Student</p>
+                    <a href="#contact"><button class="btn-contactMe">Contact</button></a>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+
+
+        <!-- about page -->
+        <div id="about" class="about-page page">
+            <div class="left">
+                <div class="pic">
+                    <img src="/img/minion.jpg" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <section>
+                    <h1>About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic pariatur sequi fugit quod, quam
+                        voluptatum
+                        eos
+                        maxime dicta officia molestiae error molestias ullam mollitia reiciendis, dignissimos doloremque
+                        beatae?
+                        Aliquam, nobis.
+                        Ipsa, veniam alias? Eligendi, aperiam fuga illo eveniet libero alias facere labore ipsa aut
+                        neque id
+                        sint
+                        quas dolor iure minus. Ut dolore obcaecati sint vel, sapiente similique quasi in?</p>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae nemo quas fuga placeat? Quibusdam
+                        illo
+                        in
+                        magni provident temporibus adipisci tempore ipsam officiis porro eum, est optio, autem iusto
+                        dolor.
+                    </p>
+                </section>
+                <div class="button-container">
+                    <a href="#contact">
+                        <button>Contact</button>
+                    </a>
+                    <button>Download CV</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- projects -->
+        <div id="projects"></div>
+        <!-- team -->
+        <div id="team"></div>
+        <!-- contact -->
+        <div id="contact"></div>
+    </div>
+
+</body>
+
+</html>
