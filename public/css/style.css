@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
+  color: white;
+}
+
+:root {
+  --primary-1: #2c2c2c;
+  --primary-2: #313131;
+  --secondary: #ffb633;
+  --text-grayish: #837f8a;
 }
 
 /* make two classes 
@@ -49,7 +57,7 @@ active will be expanded and inactive just icons */
 .sidebar .nav .list .nav-list-item a .icon {
   font-size: 2rem;
   /* color: antiquewhite; */
-  color: #837f8a;
+  color: var(--text-grayish);
 }
 
 .sidebar .nav .intro #nameDate {
@@ -109,7 +117,7 @@ body {
 }
 
 .homepage .left {
-  background: #2c2c2c;
+  background: var(--primary-1);
   min-width: 60vw;
   flex: 2;
   padding-left: 1rem;
@@ -121,11 +129,11 @@ body {
 }
 
 .homepage .left .container p {
-  color: #837f8a;
+  color: var(--text-grayish);
 }
 
 .homepage .left .container h1 {
-  color: #ffb633;
+  color: var(--secondary);
 }
 
 .homepage .left .container .sub {
@@ -135,21 +143,21 @@ body {
 .homepage .left .container .btn-contactMe,
 #about .right .button-container button {
   margin-top: 1rem;
-  border: 0.1rem solid #ffb633;
+  border: 0.1rem solid var(--secondary);
   background-color: transparent;
   padding: 0.4rem 2rem;
-  color: #ffb633;
+  color: var(--secondary);
   border-radius: 0.2rem;
 }
 
 .homepage .left .container .btn-contactMe:hover,
 #about .right .button-container button:hover {
-  background-color: #ffb633;
+  background-color: var(--secondary);
   color: azure;
 }
 
 .homepage .right {
-  background: #ffb633;
+  background: var(--secondary);
   /* width: 40vw; */
   flex: 1;
 }
@@ -172,14 +180,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #313131;
+  background: var(--primary-2);
 }
 
 .about-page .left {
   flex: 1;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 .about-page .right {
   flex: 2;
@@ -222,14 +227,14 @@ body {
   width: 18rem;
   height: 24.5rem;
   top: 20px;
-  border: 0.6rem solid #ffb633;
+  border: 0.6rem solid var(--secondary);
 }
 
 .about-page .right section h1::after {
   content: "";
   height: 2px;
   width: 20%;
-  background: #ffb633;
+  background: var(--secondary);
   position: absolute;
   left: -6%;
   bottom: 0px;
@@ -237,4 +242,332 @@ body {
 .homepage .left .container a,
 #about .right .button-container a {
   text-decoration: none;
+}
+
+#projects {
+  padding-left: 5.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--primary-1);
+}
+
+#projects .container {
+  margin: 0 10rem;
+}
+
+.project-container {
+  margin-left: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 50vh;
+}
+
+.project-container .project {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-container .project:nth-child(1) {
+  background: no-repeat url("/img/project-bg.jpg");
+  z-index: 0;
+}
+.project-container .project:nth-child(2) {
+  background: no-repeat url("/img/project-bg.jpg");
+  z-index: 0;
+}
+.project-container .project:nth-child(3) {
+  background: no-repeat url("/img/project-bg.jpg");
+  z-index: 0;
+}
+.project-container .project:nth-child(4) {
+  background: no-repeat url("/img/project-bg.jpg");
+  z-index: 0;
+}
+
+.project-container .project:nth-child(1) div {
+  height: 100%;
+  background: rgb(56, 223, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(56, 223, 255, 1) 0%,
+    rgba(53, 192, 251, 1) 41%,
+    rgba(35, 127, 231, 1) 98%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+.project-container .project:nth-child(2) div {
+  height: 100%;
+  background: rgb(248, 215, 77);
+  background: linear-gradient(
+    90deg,
+    rgba(248, 215, 77, 1) 0%,
+    rgba(244, 194, 69, 1) 41%,
+    rgba(207, 142, 38, 1) 98%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+.project-container .project:nth-child(3) div {
+  height: 100%;
+  background: rgb(240, 85, 175);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 85, 175, 1) 0%,
+    rgba(217, 84, 203, 1) 41%,
+    rgba(153, 55, 208, 1) 98%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+.project-container .project:nth-child(4) div {
+  height: 100%;
+  background: rgb(50, 196, 149);
+  background: linear-gradient(
+    90deg,
+    rgba(50, 196, 149, 1) 0%,
+    rgba(42, 202, 106, 1) 41%,
+    rgba(5, 181, 28, 1) 98%
+  );
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* .project {
+  display: flex;
+  position: relative;
+}
+
+.project .description {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  /*   width:100%; */
+/* } */
+.project-container a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title-container {
+  margin-bottom: 5rem;
+  max-width: 50%;
+}
+.title-container h1 {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.title-container h1::after {
+  content: "";
+  height: 3px;
+  width: 20%;
+  background: var(--secondary);
+  position: absolute;
+  left: -6%;
+  bottom: 0px;
+}
+
+.title-container p {
+  color: var(--text-grayish);
+}
+
+#team {
+  padding-left: 5.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--primary-2);
+}
+
+#team .container .title {
+  position: relative;
+}
+
+#team .container .title h1::after {
+  content: "";
+  height: 3px;
+  width: 10%;
+  background: var(--secondary);
+  position: absolute;
+  left: -6%;
+  top: 2.5rem;
+}
+#team .container {
+  margin: 0 10rem;
+}
+#team .list {
+  margin-top: 2rem;
+  display: flex;
+}
+
+#team .list .card {
+  height: 20rem;
+  width: 20rem;
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#team .list .card h3 {
+  margin-bottom: 1rem;
+}
+
+#team .list .card p {
+  color: var(--text-grayish);
+}
+#team .list .card:first-child {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-right: none;
+}
+
+#team .list .card:first-child p {
+  color: whitesmoke;
+}
+#team .list .card:nth-child(2) {
+  border-right: none;
+  border-left: none;
+}
+
+#team .title p {
+  width: 50%;
+  margin-top: 1rem;
+  color: var(--text-grayish);
+}
+
+#contact {
+  padding-left: 5.5rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  background: var(--primary-1);
+}
+
+#contact .container {
+  margin: 0 10rem;
+}
+
+#contact .container .top {
+  background: url("/img/lastPg.svg") 2rem;
+  /*   width: calc(100vw-5.5rem); */
+  width: 95vw;
+  height: 50vh;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+
+#contact .container .top > div:nth-child(1) {
+  background: var(--secondary);
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+#contact .container .top > h1::after {
+  content: "";
+  height: 3px;
+  width: 25%;
+  background: whitesmoke;
+  position: absolute;
+  left: 37%;
+  top: 7.3rem;
+}
+#contact .container .top > h1 {
+  z-index: 2;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#contact .container .bottom > button {
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+  color: black;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 5rem;
+}
+
+#contact .container .bottom > button:hover {
+  background-color: var(--secondary);
+  color: antiquewhite;
+}
+
+#contact .container .bottom .social-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rem;
+  margin-top: 0.5rem;
+}
+.social-buttons button {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background: var(--primary-1);
+  border-radius: 10px;
+  transition: background 150ms ease-in-out, width 150ms ease-in-out,
+    height 150ms ease-in-out;
+}
+
+.social-buttons button:hover {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  background: var(--secondary);
+}
+#contact .social {
+  margin-right: 0.5rem;
+}
+
+#contact .bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact footer {
+  color: var(--text-grayish);
+  font-size: 0.8rem;
+}
+
+#contact .bottom p {
+  color: var(--text-grayish);
+}
+#contact footer::before {
+  content: "";
+  height: 1px;
+  width: 50vw;
+  background: var(--text-grayish);
+  position: absolute;
+  left: 25%;
+  top: 90%;
 }

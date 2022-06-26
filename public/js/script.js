@@ -15,5 +15,4 @@ list.forEach((item) => {
 });
 
 // TODO: put in some nice visual elements
-// TODO: map each button to a id on the same page
 // TODO: try doing a parallax website
