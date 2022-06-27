@@ -184,10 +184,12 @@ body {
 }
 
 .about-page .left {
-  flex: 1;
+  flex: 1 1 12rem;
+  width: 100%;
 }
 .about-page .right {
-  flex: 2;
+  flex: 2 2;
+  width: 100%;
 }
 .about-page .left .pic img {
   width: 18rem;
@@ -337,20 +339,6 @@ body {
   opacity: 0.8;
 }
 
-/* .project {
-  display: flex;
-  position: relative;
-}
-
-.project .description {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-
-  /*   width:100%; */
-/* } */
 .project-container a {
   text-decoration: none;
   cursor: pointer;
