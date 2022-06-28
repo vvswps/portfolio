@@ -87,12 +87,40 @@ active will be expanded and inactive just icons */
 }
 
 /* tooltip stuff */
-/* .tooltip {
-  position: relative;
-  display: inline-block;
-} */
-
-/* Tooltip text */
+.nav-list-item::after {
+  content: "";
+  position: absolute;
+  padding: 0.5rem;
+  background: var(--text-grayish);
+  color: white;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  transform: scale(0);
+  transform-origin: -1rem;
+  transition: transform 150ms ease-in-out, content 150ms ease-in-out;
+  right: 0.1rem;
+}
+.nav-list-item:hover::after {
+  transform: scale(1);
+}
+.nav-list-item:nth-child(1):hover::after {
+  content: "Expand";
+}
+.nav-list-item:nth-child(2):hover::after {
+  content: "Home";
+}
+.nav-list-item:nth-child(3):hover::after {
+  content: "About";
+}
+.nav-list-item:nth-child(4):hover::after {
+  content: "Projects";
+}
+.nav-list-item:nth-child(5):hover::after {
+  content: "Team";
+}
+.nav-list-item:nth-child(6):hover::after {
+  content: "Contacts";
+}
 
 /* sidebar expanded stuff */
 .sidebar .nav .intro {
